@@ -1,0 +1,61 @@
+-- USERS
+CREATE TABLE users (
+    user_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(100) NOT NULL,
+    phone VARCHAR(20),
+    address VARCHAR(255),
+    join_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    profile_image VARCHAR(255),
+    role VARCHAR(20) DEFAULT 'donor' CHECK (role IN ('donor', 'campaigner', 'admin'))
+);
+
+-- CATEGORIES
+CREATE TABLE categories (
+    category_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name VARCHAR(50) UNIQUE NOT NULL,
+    description VARCHAR(255)
+);
+
+-- CAMPAIGNS
+CREATE TABLE campaigns (
+    campaign_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    user_id INT NOT NULL,
+    category_id INT NOT NULL,
+    title VARCHAR(255) NOT NULL,
+    description VARCHAR(1000) NOT NULL,
+    goal_amount DECIMAL(15,2) NOT NULL,
+    start_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    end_date TIMESTAMP NOT NULL,
+    status VARCHAR(20) DEFAULT 'draft' CHECK (status IN ('draft', 'active', 'completed', 'archived')),
+    is_urgent BOOLEAN DEFAULT FALSE,
+    campaign_image VARCHAR(255),
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (category_id) REFERENCES categories(category_id)
+);
+
+-- PURCHASES
+CREATE TABLE purchases (
+    purchase_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    user_id INT NOT NULL,
+    purchase_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    total_amount DECIMAL(15, 2) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+
+-- DONATIONS
+CREATE TABLE donations (
+    donation_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    user_id INT NOT NULL,
+    campaign_id INT NOT NULL,
+    purchase_id INT NOT NULL,
+    amount DECIMAL(15, 2) NOT NULL,
+    donation_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    payment_method VARCHAR(20),
+    is_anonymous BOOLEAN DEFAULT FALSE,
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (campaign_id) REFERENCES campaigns(campaign_id),
+    FOREIGN KEY (purchase_id) REFERENCES purchases(purchase_id)
+);

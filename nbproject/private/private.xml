@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/MedCharity/web/index.html</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/MedCharity/web/register.jsp</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/MedCharity/web/donate.jsp</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/MedCharity/web/purchase.jsp</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/MedCharity/src/java/controller/ProfileServlet.java</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/MedCharity/web/campaign.jsp</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/MedCharity/src/java/controller/NewCampaignServlet.java</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/MedCharity/web/logout.jsp</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/MedCharity/web/new_campaign.jsp</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/MedCharity/src/java/controller/LoginServlet.java</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/MedCharity/src/java/util/DBUtil.java</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/MedCharity/src/java/controller/AdminServlet.java</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/MedCharity/web/admin.jsp</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/MedCharity/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/MedCharity/web/dashboard.jsp</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/MedCharity/src/java/controller/PurchaseServlet.java</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/MedCharity/web/profile.jsp</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/MedCharity/src/java/controller/DonateServlet.java</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/MedCharity/src/java/controller/CampaignServlet.java</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/MedCharity/src/java/controller/RegisterServlet.java</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/MedCharity/web/login.jsp</file>
+        </group>
+    </open-files>
+</project-private>
